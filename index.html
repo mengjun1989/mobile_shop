@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<!--屏蔽移动设备的视口viewport-->
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>真棒微店</title>
+		<!--
+ 	 	 1. 移动app页面参照常用高分辨率手机的大小640*960
+  		 2.元素大小不要使用px，用rem作单位，1rem=16px；
+  		 3.将根元素html字体的默认大小改为62.5%；相对于是字体大小默认为10px；
+  		 此时在使用rem作为单位就比较方便
+  		 4.建议将样式表及js文件写到外部然后再引入到当前页面中
+   -->
+
+		<!--第三方框架的代码写到这儿防止找不到页面中的元素-->
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/jqmin.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--前端传递数据给后台有三种方式
+			1.表单方式，通过传参传值得方式
+			2.ajax(阿贾克斯)，通过参数传值方式;同时也能接收后台回传的值
+			3.通过超链接参数传值
+			<a href="user.php?user="+"tom"+"&&pass="+"123"></a>
+		-->
+		<div class="user-login">
+			<p class="user-close">
+				<span class="user-info"></span><button class="btn-close">x</button></p>
+			<p class="user-title">用户登录/注册</p>
+			<p class="username"><span class="username-sp">用户名:</span><input type="text" class="user-inp" /></p>
+			<p class="password"><span class="password-sp">密&ensp;&ensp;码:</span><input type="password" class="pass-inp" /></p>
+			<p class="user-login-btn">
+				<span class="hqy-btn clearF">
+					<button class="login-btn-lg">登录</button>
+					<button class="login-btn-reset">重置</button>
+					<button class="login-btn-reg">注册</button></p>
+				</span>
+		</div>
+		<div class="home mm-gg">
+			<!--语义化标签-->
+			<header>
+				<div class="search">
+					<!--一定用行内元素-->
+					<div class="wrap"><button id='btn_search'></button><input type="text" id="inp_one" placeholder="真棒超级品牌日" /><button id="login_one">登录</button></div>
+				</div>
+				<div class="rain">
+					<button></button>
+					<button></button>
+					<button></button>
+					<button class="no"></button>
+				</div>
+			</header>
+			<div class="main">
+				<div class="hqy">
+					<div class="mm_one clearF">
+						<a href="#">
+							<img src="icon/a.png" />
+							<p>真棒超市</p>
+						</a>
+						<a href="#">
+							<img src="icon/b.png" />
+							<p>全球购</p>
+						</a>
+						<a href="#">
+							<img src="icon/c.png" />
+							<p>真棒生鲜</p>
+						</a>
+						<a href="#">
+							<img src="icon/d.png" />
+							<p>真棒到家</p>
+						</a>
+						<a href="#">
+							<img src="icon/e.png" />
+							<p>真棒超市</p>
+						</a>
+					</div>
+					<div class="mm_two clearF">
+						<a href="#">
+							<img src="icon/e.png" />
+							<p>充值中心</p>
+						</a>
+						<a href="#">
+							<img src="icon/d.png" />
+							<p>惠赚钱</p>
+						</a>
+						<a href="#">
+							<img src="icon/c.png" />
+							<p>领券</p>
+						</a>
+						<a href="#">
+							<img src="icon/b.png" />
+							<p>物流查询</p>
+						</a>
+						<a href="#">
+							<img src="icon/a.png" />
+							<p>领棒豆</p>
+						</a>
+					</div>
+					<div class="sofa">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td rowspan="2">
+									<img src="images/sofa_01.png"></td>
+								<td>
+									<img src="images/sofa_02.png"></td>
+								<td rowspan="2">
+									<img src="images/sofa_03.png"></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="images/sofa_04.png"></td>
+							</tr>
+						</table>
+					</div>
+					<!--main-hqy-->
+				</div>
+				<!--main-end-->
+			</div>
+			<!--以下为商品展示-->
+			<div class="goods-all">
+				<div class="goods clearF">
+					<div class="left"><img src="images/gg1.jpg" /></div>
+					<div class="right">
+						<p class="title-info">0元大抽奖,真棒11号店为你开启马尔代夫四天三晚浪漫之行</p>
+						<div class="carts clearF">
+							<div class="carts-left">
+								<p><span>&yen;0</span> <del>&yen;288</del> </p>
+								<p>0折</p>
+							</div>
+							<div class="carts-right">
+								<button><img src="icon/carts.png"/></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--商品展示页-->
+		<div class="goods-disp mm-gg">
+			<div class="goods1 clearF">
+				<img src="images/gg1.jpg" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipisic possimus dicta assumenda hic praesentium dolore vitae eum voluptatem?</p>
+			</div>
+			<div class="goods2">
+				<img src="images/gg2.jpg" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione.</p>
+			</div>
+			<div class="goods3">
+				<img src="images/gg3.jpg" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae neque!</p>
+			</div>
+			<div class="goods4">
+				<img src="images/gg4.jpg" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fugit.</p>
+			</div>
+			<div class="goods5">
+				<img src="images/gg5.jpg" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quisquam.</p>
+			</div>
+			<div class="goods6">
+				<img src="images/gg6.jpg" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus autem!</p>
+			</div>
+		</div>
+		<!--更多-->
+
+		<div class="more mm-gg">
+			<div class="more-goods">
+				<p>美食美图美商品1</p>
+				<p>美食美图美商品2</p>
+				<p>美食美图美商品3</p>
+				<p>美食美图美商品4</p>
+				<p>美食美图美商品5</p>
+				<p>美食美图美商品6</p>
+				<p>美食美图美商品7</p>
+				<p>美食美图美商品8</p>
+				<p>美食美图美商品9</p>
+				<p>美食美图美商品10</p>
+			</div>
+		</div>
+		<!--底部导航栏-->
+		<footer class="clearF">
+			<a>
+				<img src="icon/okhome.png" />
+				<p>首页</p>
+			</a>
+			<a>
+				<img src="icon/okfenye.png" />
+				<p>商品</p>
+			</a>
+			<a>
+				<img src="icon/okmore.png" />
+				<p>购物车</p>
+			</a>
+		</footer>
+	</body>
+	<script src="js/index.js" type="text/javascript" charset="utf-8">
+	</script>
+ 	<script type="text/javascript">
+    	//元素或字体自适应设置
+    	(function(win,doc){
+    		change(win,doc);
+    		function change(){
+    		   
+    		}
+    	})(window,document);
+    </script>
+
+</html>

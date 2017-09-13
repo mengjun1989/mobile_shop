@@ -1,0 +1,405 @@
+/*通过媒体查询精确在不同屏宽设备中设置样式	*/
+@media only screen and (min-width:100px )and (max-width:480px) {
+	
+}
+@media only screen and (min-width:480px )and (max-width:640px) {
+	
+}
+/*通用设置*/
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	/*改变了页面根元素字体默认的大小为10px
+	 方便用rem为单位去设置元素大小，从而实现在不同的设置按比例设置元素
+	 的大小，从而达到完美展示*/
+	
+	font-size: 62.5%;
+	padding-bottom: 4rem;
+}
+.clearF:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*设置样式*/
+header{
+	width: 100%;
+	height: 20rem;
+	background: url(../img/ok1.png) no-repeat;
+	background-size: cover;
+	transition: 1s all;
+}
+header>.search{
+	width: 100%;
+	height: 4rem;
+	line-height: 4rem;
+	text-align: center;
+	position: relative;
+}
+.search>.wrap{
+	height: 4rem;
+	/*行内元素，适应*/
+	display: inline;
+	/*outline: 2px solid blue;*/
+	position: relative;
+}
+.search>.wrap>#inp_one{
+	width: 70%;
+	height: 3rem;
+	font-size: 1.6rem;
+	border-radius: 2rem;
+	outline: medium;
+	padding-left:6rem;
+	vertical-align: middle;
+}
+.search>.wrap>#login_one{
+	width: 10%;
+	height: 3rem;
+	border: none;
+	outline: medium;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 1.6rem;
+	color: white;
+	vertical-align: middle;
+}
+
+.search>.wrap>#btn_search{
+	border: none;
+	background-color: transparent;
+	background: url(../icon/search_blaCK.png) no-repeat;
+	background-position: center;
+	background-size:60%;
+	outline: medium;
+	width: 8rem;
+	height: 3rem;
+	cursor: pointer;
+	/*background-color: white;*/
+	vertical-align: middle;
+	position: absolute;
+	left:-0.9rem;
+	top:-0.8rem;
+}
+
+/*小雨滴的样式*/
+header>.rain{
+	width: 100%;
+	height: 4rem;
+	/*background: pink;*/
+	text-align:center;
+	/*调行高，调整子元素上下对齐的效果*/
+	line-height: 3.6rem;
+	margin-top: 10rem;
+}
+.rain>button{
+	width: 1.5rem;
+	height: 1.5rem;
+	border:none;
+	background-color: white;
+	border-radius: 50%;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.rain>button:not(.no){
+	margin-right: 1rem;
+}
+.main{
+	width: 100%;
+	background: url(../img/view1.jpg) no-repeat;
+	background-size: cover;
+	padding-top: 4rem;
+}
+.main>.main_hqy{
+	width: 100%;
+	background-color: rgba(255,255,255,0.8);
+	padding-top: 2rem;
+}
+/*设置超链接的样式*/
+.main>div>div{
+	width: 100%;
+	text-align: center;
+	
+}
+.main>div>div>a{
+	color: black;
+	font-size: 1.5rem;
+	text-decoration: none;
+	/*此处要注意转换元素类型的选择*/
+	display: block;
+	width: 20%;
+	height: 9rem;
+	float: left;
+}
+.main>div>div>a>img{
+	width: 50%;
+}
+.main_hqy>.sofa>.sofa_left>img{
+	float:left;
+}
+.main_hqy>.sofa>.sofa_middle>img{
+	width: 20rem;
+	display: block;
+}
+.main_hqy>.sofa>.sofa_right>img{
+	width: 10rem;
+}
+.sofa{
+	width: 100%;
+	margin-top: 4rem;
+}
+.sofa>table{
+	margin: auto;
+}
+.sofa>table img{
+	float: left;
+}
+/******所有商品的样式*****/
+.goods{
+	width: 100%;
+	height: 11rem;
+	border-bottom: 1px solid grey;
+}
+.goods>div{
+	float: left;
+}
+.goods>.left{
+	width: 20%;
+	height: 11rem;
+	line-height: 10.5rem;
+	text-align: center;
+	/*height: 6rem;*/
+}
+.goods>.left>img{
+	 width: 9rem;
+	 vertical-align: middle;
+}
+.goods>.right{
+	width: 80%;
+	height: 11rem;
+	/*height: 8rem;*/
+}
+.goods>.right>.title-info{
+	margin-top: 0.8rem;
+	font-size:1.8rem;
+	color: black;
+	height: 3rem;
+	line-height: 2rem;
+}
+.goods>.right>.carts{
+	height: 8rem;
+	/*margin-left: 0.4rem;*/
+	/*background-color:darkgoldenrod;*/
+}
+.goods>.right>.carts>.carts-left{
+	float: left;
+	/*height: 8rem;*/
+	padding-top:1rem;
+}
+.goods>.right>.carts>.carts-right{
+	float: right;
+	height: 11rem;
+	line-height: 10rem;
+}
+
+.carts>.carts-left>p:nth-of-type(1)>span{
+	font-size:2.6rem;
+	color: red; 
+}
+.carts>.carts-left>p:nth-of-type(1)>del{
+	font-size:2.6rem;
+	color:#ccc; 
+	margin-left: 1rem;
+}
+.carts>.carts-left>p:nth-of-type(2){
+	font-size:2rem;
+}
+.carts>.carts-right>button{
+	width: 8rem;
+	height: 3.5rem;
+	background-color:red;
+	border: none;
+	outline: medium;
+	border-radius: 1rem;
+	cursor: pointer;
+	display: none;
+}
+.carts>.carts-right>button>img{
+	width: 2.5rem;
+}
+/*商品展示样式*/
+.goods-disp{
+	width: 100%;
+	background-color: lightgoldenrodyellow;
+	display: none;
+}
+.goods-disp>div{
+	margin-top:2rem;
+}
+.goods-disp>div>img{
+	width: 20%;
+	vertical-align: middle;
+}
+.goods-disp>div>p{
+	font-size: 2rem;
+	width: 79%;
+	display: inline-block;
+}
+/*更多商品样式*/
+.more{
+	padding: 0 2rem;
+	display: none;
+}
+.more>.more-goods{
+	background-color: lightyellow;
+	border-radius: 2rem;
+}
+.more>.more-goods>p{
+	font-size: 2rem;
+}
+/*底部导航条*/
+footer{
+	width: 100%;
+	height: 5rem;
+	border-top:1px solid #888;
+	text-align:center;
+	position: fixed;
+	bottom: 0;
+	/*不要设置行高*/
+	background-color:white;
+	color: black;
+	/*padding-top: 1rem;*/
+	/*可以转成弹性盒子
+	/*display: flex;*/
+}
+
+footer>a{
+	display:block;
+	/*flex-grow: 1;*/
+	height: 5rem;
+	text-align:center;
+	/*宽度均分*/
+	width: 33.33%;
+	float: left;
+}
+footer>a:link{
+	text-decoration: none;
+	color: black;
+}
+footer>a:visited{
+	text-decoration: none;
+	color: black;
+}
+footer>a:hover{
+	text-decoration: none;
+	color: red;
+}
+footer>a>img{
+	/*display: block;*/
+	/*outline: 2px solid red;*/
+	/*vertical-align: top;*/
+	/*margin: 0 auto;*/
+	height: 3rem;
+	opacity: 0.4;
+}
+footer>a:hover>img{
+	opacity: 0.8;
+}
+
+footer>a>p{
+	font-size: 1rem;
+	/*color: black;*/
+	height: 1rem;
+	width: 100%;
+	/*line-height: 1rem;*/
+	/*background-color: pink;*/
+}
+/*****用户登录*******/
+.user-login{
+	width: 90%;
+	height: 22rem;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	/*设置定位后，元素自动转换为行内块元素*/
+	position: fixed;
+	/*top:10rem;*/
+	left:5%;
+	font-size: 2rem;
+	text-align: center;
+	border-radius: 6px;
+	display: none;
+}
+.user-login>.user-close{
+	height: 3rem;
+	text-align: right;
+}
+.user-login>.user-close>.btn-close{
+	width: 3rem;
+	height: 3rem;
+	font-size: 2.5rem;
+	background-color: rgba(0,0,0,0);
+	border: none;
+	font-family: "微软雅黑";
+	color: #999;
+	vertical-align: middle;
+	cursor: pointer;
+	outline: medium;
+}
+.user-close>.user-info{
+	display: inline-block;
+	width: 90%;
+	height: 3rem;
+	text-align: center;
+	font-size:2rem;
+	color: #c00;
+	/*outline: 1px solid red;*/
+}
+.user-login>.user-title{
+	/*margin-top: 1rem;*/
+	color:grey;
+	font-family: "微软雅黑";
+	font-size: 2.4rem;
+}
+.user-login>.username{
+	margin-top:2rem;
+	margin-bottom: 1rem;
+}
+.user-login>p>input{
+	width: 18rem;
+	height: 3rem;
+	vertical-align: middle;
+	border: 1px solid red;
+	font-size: 1.8rem;
+	color: green;
+}
+.user-login-btn{
+	height: 4rem;
+	margin-top: 2rem;
+	border-top: 1px solid #ddd;
+	text-align: center;
+	
+}
+.user-login-btn>.hqy-btn{
+	/*转换为块级元素*/
+	display: block;
+	width: 24.2rem;;
+	margin: 0 auto;
+}
+.user-login-btn>span>button{
+	width: 8rem;
+	height: 4rem;
+	border: none;
+	float: left;
+	outline: medium;
+	background-color: #eee;
+	font-size: 1.6rem;·
+}
+.user-login-btn>span>button:hover{
+	/*background-color: red;*/
+	color: red;
+}
+.user-login-btn>span>.login-btn-reset{
+	border-left: 0.1rem solid #ddd;
+	border-right: 0.1rem solid #ddd;
+}
